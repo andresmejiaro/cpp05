@@ -6,11 +6,12 @@
 #    By: amejia <amejia@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/27 23:52:11 by amejia            #+#    #+#              #
-#    Updated: 2023/07/06 01:03:53 by amejia           ###   ########.fr        #
+#    Updated: 2023/07/06 11:18:12 by amejia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
+	RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 NAME = central
 NAME_DEBUG = debug

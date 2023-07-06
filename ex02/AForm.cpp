@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 19:02:29 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 01:49:37 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 10:30:08 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ void AForm::_gradeChecker(){
 
 
 bool AForm::gradeCheckerExecute(const Bureaucrat &executor) const{
-	if (this->_gradeToExecute <= executor.getGrade())
+	if (this->_gradeToExecute >= executor.getGrade())
 		return (true);
 	return(false);
 }

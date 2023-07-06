@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 23:56:30 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 10:46:33 by amejia           ###   ########.fr       */
+/*   Created: 2023/07/06 10:41:39 by amejia            #+#    #+#             */
+/*   Updated: 2023/07/06 11:11:31 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef ShubberyCreationForm_H
-#define ShubberyCreationForm_H
-#include <ctime>
-#include <fstream>
+#ifndef PRESIDENTIALPARDONFORM_H
+#define PRESIDENTIALPARDONFORM_H
 #include "AForm.hpp"
+#include <ctime>
 
-class ShubberyCreationForm: public AForm {
+class PresidentialPardonForm:public AForm {
 private:
 	std::string		_target;
-	std::string		_getTree() const;
 public:
-	ShubberyCreationForm();
-	ShubberyCreationForm(std::string target);
-	ShubberyCreationForm(const ShubberyCreationForm&);
-	~ShubberyCreationForm();
-	std::string getTarget() const;
-  	ShubberyCreationForm& operator=(const ShubberyCreationForm&);
+	PresidentialPardonForm();
+	PresidentialPardonForm(const PresidentialPardonForm&);
+	PresidentialPardonForm(std::string target);
+	~PresidentialPardonForm();
+	PresidentialPardonForm& operator=(const PresidentialPardonForm&);
 	virtual bool	execute(Bureaucrat const & executor) const;
+	std::string getTarget() const;
+
 };
 
-#endif // ShubberyCreationForm_H
+#endif // PresidentialPardonForm_H

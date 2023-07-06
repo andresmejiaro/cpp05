@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:56:30 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 02:10:16 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 10:31:55 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ std::string	ShubberyCreationForm::getTarget() const{
 }
 
 bool ShubberyCreationForm::execute(Bureaucrat const &executor) const{
-	if (this->gradeCheckerExecute(executor) && this->getSigned()){
+	if (this->gradeCheckerExecute(executor) && this->getSigned() == true){
 		std::ofstream file;
 		file.open((this->getTarget() + "_shubbery").c_str(), std::ios_base::out);
 		if (file.is_open()){
