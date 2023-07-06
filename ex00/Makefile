@@ -6,11 +6,11 @@
 #    By: amejia <amejia@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/27 23:52:11 by amejia            #+#    #+#              #
-#    Updated: 2023/07/04 17:16:27 by amejia           ###   ########.fr        #
+#    Updated: 2023/07/05 17:48:37 by amejia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Bureocrat.cpp
+SRCS = main.cpp Bureaucrat.cpp
 
 NAME = central
 NAME_DEBUG = debug
