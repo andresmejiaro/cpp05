@@ -12,11 +12,11 @@
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(): _name("Bureaucrat #1"),_grade(150){
-	std::cout << *this	<< " ready to serve the central Bureocracy!" 
-		<< std::endl;
-	this->_gradeChecker();
-}
+// Bureaucrat::Bureaucrat(): _name("Bureaucrat #1"),_grade(150){
+// 	std::cout << *this	<< " ready to serve the central Bureocracy!" 
+// 		<< std::endl;
+// 	this->_gradeChecker();
+// }
 
 Bureaucrat::Bureaucrat(std::string name, int grade): _name(name),_grade(grade){
 	std::cout << *this << " ready to serve the central Bureocracy!" 
@@ -24,14 +24,14 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _name(name),_grade(grade){
 	this->_gradeChecker();
 }
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat & other){
-	if (this != &other){
-		this->_name = other.getName();
-		this->_grade = other.getGrade();
-		this->_gradeChecker();
-	}
-	return (*this);
-}
+// Bureaucrat &Bureaucrat::operator=(const Bureaucrat & other){
+// 	if (this != &other){
+// 		this->_name = other.getName();
+// 		this->_grade = other.getGrade();
+// 		this->_gradeChecker();
+// 	}
+// 	return (*this);
+// }
 
 
 std::string Bureaucrat::getName() const{

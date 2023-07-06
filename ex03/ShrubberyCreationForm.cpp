@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:56:30 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 10:31:55 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 16:34:55 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ std::string	ShubberyCreationForm::_getTree() const{
 \\  Y  |  \\__,dHHFdHH|HHhoHHb.__Krogg  Y\n\
 ##########################################\n";
 
-if (std::time(0) & 1)
+if (std::rand() % 2)
 	return tree1;
 else
 	return tree2;
@@ -92,7 +92,8 @@ ShubberyCreationForm::ShubberyCreationForm(const ShubberyCreationForm &other):
 		
 }
 
-ShubberyCreationForm &ShubberyCreationForm::operator=(const ShubberyCreationForm &other){
+ShubberyCreationForm &ShubberyCreationForm::operator=(const 
+	ShubberyCreationForm &other){
 	if (this != &other){
 		AForm::operator=(other);
 		this->_target = other.getTarget();

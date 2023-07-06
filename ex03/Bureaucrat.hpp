@@ -20,9 +20,9 @@ class AForm;
 class Bureaucrat
 {
 private:
-	std::string _name;
-	int			_grade;
-	void		_gradeChecker();
+	const std::string	_name;
+	int					_grade;
+	void				_gradeChecker();
 public:
 	class GradeTooHighException: public std::exception{
 		public:

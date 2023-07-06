@@ -34,7 +34,6 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat & other){
 	return (*this);
 }
 
-
 std::string Bureaucrat::getName() const{
 	return(this->_name);
 }
@@ -43,7 +42,8 @@ int	Bureaucrat::getGrade() const{
 	return(this->_grade);
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &other): _name(other.getName()),_grade(other.getGrade()){
+Bureaucrat::Bureaucrat(const Bureaucrat &other): _name(other.getName()),
+	_grade(other.getGrade()){
 	this->_gradeChecker();
 	std::cout << *this	<< " ready to serve the central Bureocracy!"
 		<< std::endl;

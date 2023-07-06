@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:56:30 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 10:46:33 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 16:29:34 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #ifndef ShubberyCreationForm_H
 #define ShubberyCreationForm_H
 #include <ctime>
+#include <cstdlib>  
 #include <fstream>
 #include "AForm.hpp"
 

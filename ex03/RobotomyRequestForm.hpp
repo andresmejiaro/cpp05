@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 10:41:39 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 10:52:47 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 16:29:43 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #define ROBOTOMYREQUESTFORM_H
 #include "AForm.hpp"
 #include <ctime>
+#include <cstdlib>  
 
 class RobotomyRequestForm:public AForm {
 private:

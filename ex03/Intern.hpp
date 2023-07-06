@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 11:30:19 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 12:16:49 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 21:40:13 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,11 @@ public:
 	~Intern();
 	Intern& operator=(const Intern&);
 	AForm *makeForm(std::string, std::string);
-  // TODO: Add public member functions
 
 private:
-	static AForm *newPresidentialPardonForm(std::string);
-	static AForm *newRobotomyRequestForm(std::string);
-	static AForm *newShubberyCreationForm(std::string);
-  // TODO: Add private member variables
+	AForm *newPresidentialPardonForm(std::string);
+	AForm *newRobotomyRequestForm(std::string);
+	AForm *newShubberyCreationForm(std::string);
 };
 
 #endif // Intern_H

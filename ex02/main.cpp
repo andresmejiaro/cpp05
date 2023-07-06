@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 17:08:49 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 11:17:49 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 16:36:52 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 int main(void){
 	{
+	std::srand(std::time(0));
 	std::cout << "---Park Testing---" << std::endl;
 	
 	ShubberyCreationForm Park("Park");
@@ -43,7 +44,7 @@ int main(void){
 	}
 	{
 	std::cout << "---Robotomy Testing---" << std::endl;
-	
+	std::srand(std::time(0));
 	RobotomyRequestForm RBender("Bender");
 	Bureaucrat Conrad("Conrad", 34);
 	Bureaucrat Beholder("Beholder", 11);

@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 18:51:57 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/05 22:29:00 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 21:42:36 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class Form
 {
 private:
-	std::string	_name;
-	bool		_isSigned;
-	int			_gradeToSign;
-	int			_gradeToExecute;
-	void		_gradeChecker();
+	const std::string	_name;
+	bool				_isSigned;
+	const int			_gradeToSign;
+	const int			_gradeToExecute;
+	void				_gradeChecker();
 public:
 	class GradeTooHighException: public std::exception{
 	public:

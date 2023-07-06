@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:56:30 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 10:55:48 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 16:36:31 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,13 @@ std::string	RobotomyRequestForm::getTarget() const{
 bool RobotomyRequestForm::execute(Bureaucrat const &executor) const{
 	if (this->gradeCheckerExecute(executor) && this->getSigned() == true){
 		std::cout << "* Drilling Noises * \n";
-		if (std::time(0) & 1){
+		if (std::rand() % 2){
 			std::cout << _target + " has been robotomized\n";
+			return (true);
 		}
 		else
 		std::cout << "robotomy failed\n";
+		return (true);
 	}
 	else if (!this->getSigned()){
 		throw (AForm::UnsignedException());

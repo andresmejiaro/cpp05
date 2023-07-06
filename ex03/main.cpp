@@ -6,92 +6,51 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 17:08:49 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 11:17:49 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 16:33:57 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
+
+void leaks(){
+	system("leaks central");
+}
+
 
 int main(void){
-	{
-	std::cout << "---Park Testing---" << std::endl;
+{
+	//atexit(leaks);
+	std::srand(std::time(0));
+	Intern someRandomIntern;
+	AForm* rrf;
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 	
-	ShubberyCreationForm Park("Park");
-	Bureaucrat Conrad("Conrad", 34);
-	Bureaucrat Loser("Loser", 150);
-	
-	Park.beSigned(Loser);
-	try{
-		Park.execute(Conrad);
-	}
-	catch (const AForm::UnsignedException &e){
-		std::cout << "Exception Caught: " << e.what() << std::endl;
-	}
-	Park.beSigned(Conrad);
-	try{
-	Loser.executeForm(Park);
-		
-	}
-	catch (const AForm::GradeTooLowException &e){
-		std::cout << "Exception Caught: " << e.what() << std::endl;
-	}
-	
-	Conrad.executeForm(Park);
-	}
-	{
+
 	std::cout << "---Robotomy Testing---" << std::endl;
 	
-	RobotomyRequestForm RBender("Bender");
 	Bureaucrat Conrad("Conrad", 34);
 	Bureaucrat Beholder("Beholder", 11);
 
 	
-	RBender.beSigned(Conrad);
+	(*rrf).beSigned(Conrad);
 	try{
-		RBender.execute(Conrad);
+		(*rrf).execute(Conrad);
 	}
 	catch (const AForm::UnsignedException &e){
 		std::cout << "Exception Caught: " << e.what() << std::endl;
 	}
-	RBender.beSigned(Conrad);
+	(*rrf).beSigned(Conrad);
 	try{
-		Conrad.executeForm(RBender);
+		Conrad.executeForm(*rrf);
 		
 	}
 	catch (const AForm::GradeTooLowException &e){
 		std::cout << "Exception Caught: " << e.what() << std::endl;
 	}
 	
-	Conrad.executeForm(RBender);
-	}
-	{
-	std::cout << "---Presidential Pardon Testing---" << std::endl;
-	
-	PresidentialPardonForm Zapp("Zapp");
-	Bureaucrat One("One", 1);
-	Bureaucrat Beholder("Beholder", 11);
-	Bureaucrat Conrad("Conrad", 34);
-	
-	Zapp.beSigned(Conrad);
-	try{
-		Zapp.execute(Beholder);
-	}
-	catch (const AForm::UnsignedException &e){
-		std::cout << "Exception Caught: " << e.what() << std::endl;
-	}
-	Beholder.signForm(Zapp);
-	try{
-		Conrad.executeForm(Zapp);
-		
-	}
-	catch (const AForm::GradeTooLowException &e){
-		std::cout << "Exception Caught: " << e.what() << std::endl;
-	}
-	
-	One.executeForm(Zapp);
-	}
+	Conrad.executeForm(*rrf);
+	delete rrf;
 	return (0);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: amejia <amejia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 18:51:57 by amejia            #+#    #+#             */
-/*   Updated: 2023/07/06 02:09:38 by amejia           ###   ########.fr       */
+/*   Updated: 2023/07/06 21:46:48 by amejia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 class AForm
 {
 private:
-	std::string	_name;
-	bool		_isSigned;
-	int			_gradeToSign;
-	int			_gradeToExecute;
-	void		_gradeChecker();
+	const std::string	_name;
+	bool				_isSigned;
+	const int			_gradeToSign;
+	const int			_gradeToExecute;
+	void				_gradeChecker();
 public:
 	class GradeTooHighException: public std::exception{
 	public:
@@ -38,7 +38,7 @@ public:
 	};
 	bool		gradeCheckerExecute(const Bureaucrat &executor) const;
 	AForm();
-	~AForm();
+	virtual ~AForm();
 	AForm(const AForm &other);
 	AForm &operator=(const AForm &other);
 	AForm(const std::string name,int gradeToSign, int gradeToExecute);
