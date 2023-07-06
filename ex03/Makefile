@@ -6,13 +6,14 @@
 #    By: amejia <amejia@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/27 23:52:11 by amejia            #+#    #+#              #
-#    Updated: 2023/07/02 15:19:37 by amejia           ###   ########.fr        #
+#    Updated: 2023/07/06 12:14:54 by amejia           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
+	RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
-NAME = zoo
+NAME = central
 NAME_DEBUG = debug
 
 
